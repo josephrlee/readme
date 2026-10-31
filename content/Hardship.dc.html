@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Case study 02: A way to pause debt collection</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&amp;family=Literata:ital,wght@0,400;0,700;1,400&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#27C9F1}a:hover{color:#8FE3F8}
+.pf h1,.pf h2,.pf h3,.pf p,.pf ul{margin:0}
+.pf h1,.pf h2,.pf h3,.pf .micro,.pf .tag{font-family:'Outfit','Helvetica Neue',Arial,sans-serif}
+.pf h1{font-size:48px;font-weight:900;letter-spacing:0.01em;line-height:1.08}
+.pf h2{font-size:28px;font-weight:800;line-height:1.15}
+.pf h3{font-size:20px;font-weight:700;line-height:1.3}
+.pf p,.pf li{font-size:16px;line-height:1.6;font-weight:400}
+.pf ul{padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.pf .micro{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+.pf .mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.pf .lead{font-size:22px;line-height:1.45;font-style:italic}
+.pf .tag{display:inline-block;align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:0.5px;padding:4px 10px;border-radius:9999px}
+.pf .led{background:#27C9F1;color:#111111}
+.pf .partnered{border:1px solid #27C9F1;color:#27C9F1}
+.pf strong{font-weight:700}
+/* Type rhythm: 4px baseline, line heights on the grid, prose capped at ~66 characters */
+.pf p,.pf li{font-size:18px;line-height:28px;max-width:66ch!important}
+.pf .lead{font-size:22px;line-height:32px;max-width:32em!important}
+.pf h1{line-height:56px;max-width:22ch!important}
+.pf h2{font-size:28px;line-height:36px}
+.pf h3{line-height:28px}
+.pf .micro{font-size:12px;line-height:16px}
+.pf p[style*='font-size: 14px'],.pf figcaption{font-size:15px!important;line-height:24px}
+.pf .mono{line-height:1.2}
+.pf .skip{position:absolute;left:-9999px;top:16px;z-index:10;background:#27C9F1;color:#111111;padding:8px 16px;border-radius:6px;font-weight:700}
+.pf .skip:focus{left:16px}
+</style>
+</helmet>
+<div class="pf" style="position: relative; width: 1200px; height: 2480px; box-sizing: border-box; padding: 80px; background: #222222; color: #F5F5F5; font-family: 'Literata',Georgia,serif; display: flex; flex-direction: column; gap: 56px">
+<a href="#main" class="skip">Skip to main content</a>
+<nav aria-label="Main" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid #444444; padding-bottom: 20px">
+<a href="Main.dc.html" style="font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 22px; font-weight: 900; color: #F5F5F5; text-decoration: none">Joseph Lee</a>
+<ul style="list-style: none; display: flex; flex-direction: row; gap: 28px; margin: 0; padding: 0"><li><a href="Main.dc.html" style="font-weight: 700">Work</a></li><li><a href="About.dc.html" style="font-weight: 700">About</a></li><li><a href="https://www.linkedin.com/in/josephrlee" aria-current="page" style="font-weight: 700">LinkedIn</a></li><li><a href="mailto:josephrlee@gmail.com" aria-current="page" style="font-weight: 700">Email</a></li></ul>
+</nav>
+<main id="main" style="display: flex; flex-direction: column; gap: 56px">
+
+<header style="display: flex; flex-direction: column; gap: 20px">
+<p class="micro" style="color: #27C9F1">Case study 02</p>
+<h1 style="max-width: 980px">A way to pause debt collection, without hiding the risk</h1>
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 56px; align-items: start">
+<p class="lead" style="color: #D6D6D6">Veterans in a short-term hardship needed a way to pause debt collection, but a pause could cost them their chance at a waiver. I designed the flow and content, and built the review and resolve pages.</p>
+<dl style="margin: 0; display: flex; flex-direction: column; gap: 20px; border-left: 1px solid #444444; padding-left: 32px">
+<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">Situation</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">Small release, strict policy</dd></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">My role</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">Designer + front end</dd></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">Team</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">Designer-researcher, PM, 2 engineers</dd></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">Outcome</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">Launched July 2026</dd></div>
+</dl>
+</div>
+</header>
+
+<div style="border: 2px dashed #5A5A5A; border-radius: 10px; height: 380px; display: flex; align-items: center; justify-content: center; background: #2C2C2C">
+<p class="mono" style="color: #B8B8B8; font-size: 14px">[Hero visual: relief options with hardship suspension · warning page]</p>
+</div>
+
+
+<section style="display: flex; flex-direction: column; gap: 16px; max-width: 900px">
+<h2>The problem</h2>
+<p>A hardship suspension pauses collections but still counts against the waiver deadline. If it’s denied, a Veteran could run out of time. The option had to be easy to find without becoming a trap.</p>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 24px">
+<h2>What I did</h2>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+<div style="border: 1px solid #444444; border-radius: 10px; padding: 24px; background: #2C2C2C; display: flex; flex-direction: column; gap: 12px">
+<h3>Gave the risk its own page</h3>
+<p style="color: #D6D6D6">Our designer-researcher suggested a separate warning page. I designed it and added a clear way to go back and pick another option.</p>
+</div>
+<div style="border: 1px solid #444444; border-radius: 10px; padding: 24px; background: #2C2C2C; display: flex; flex-direction: column; gap: 12px">
+<h3>Swapped an essay for a simple choice</h3>
+<p style="color: #D6D6D6">I replaced a free-text answer with a short list of time ranges. The Debt Management Center agreed, and their staff can act on it.</p>
+</div>
+<div style="border: 1px solid #444444; border-radius: 10px; padding: 24px; background: #2C2C2C; display: flex; flex-direction: column; gap: 12px">
+<h3>Kept it small and the words consistent</h3>
+<p style="color: #D6D6D6">We cut anything the first release didn’t need. I owned the wording and kept terms consistent across the form, with VA content sign-off.</p>
+</div>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 40px; border-top: 1px solid #444444; padding-top: 40px">
+<div style="display: flex; flex-direction: column; gap: 24px">
+<h2>The result</h2>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 8px; border-top: 4px solid #27C9F1; padding-top: 16px"><h3 style="font-size: 22px">Used from week one</h3><p style="color: #B8B8B8">In its first weeks, Veterans chose it alongside waivers and repayment plans.</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px; border-top: 4px solid #27C9F1; padding-top: 16px"><h3 style="font-size: 22px">Risk in plain sight</h3><p style="color: #B8B8B8">The waiver trade-off has its own page, so no one picks it blind.</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px; border-top: 4px solid #27C9F1; padding-top: 16px"><h3 style="font-size: 22px">Partners in the loop</h3><p style="color: #B8B8B8">I demoed it to Veteran service organizations so they know when to recommend it.</p></div>
+</div>
+</div>
+<figure style="margin: 0; border-left: 4px solid #27C9F1; padding: 8px 0 8px 28px; max-width: 900px; display: flex; flex-direction: column; gap: 12px">
+<h2 style="font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin: 0; color: #B8B8B8">What I learned</h2>
+<blockquote style="margin: 0"><p class="lead" style="font-size: 26px; color: #F5F5F5">When people make big decisions inside rules they didn’t write, the design has to be honest about the trade-offs.</p></blockquote>
+</figure>
+<div style="display: flex; flex-direction: column; gap: 12px; border: 1px solid #444444; border-radius: 10px; padding: 32px; background: #2C2C2C">
+<h2 style="font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin: 0; color: #27C9F1">Next case study</h2>
+<p style="color: #D6D6D6">Hardship suspension was about being honest with Veterans. Next is making sure everyone can actually use what we ship.</p>
+<p style="font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 24px; line-height: 32px; font-weight: 700; max-width: none"><a href="Accessibility.dc.html" style="color: #F5F5F5">Making accessibility part of how we work<span aria-hidden="true"> →</span></a></p>
+</div>
+</section>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1200,"height":2480}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

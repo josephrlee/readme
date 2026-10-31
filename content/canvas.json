@@ -1,0 +1,127 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Main.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 1200,
+      "h": 2980,
+      "title": "Overview"
+    },
+    "Payments.dc.html": {
+      "x": 1280,
+      "y": 0,
+      "w": 1200,
+      "h": 2460,
+      "title": "01 · My VA Payments"
+    },
+    "Hardship.dc.html": {
+      "x": 2560,
+      "y": 0,
+      "w": 1200,
+      "h": 2480,
+      "title": "02 · Hardship Suspension"
+    },
+    "Accessibility.dc.html": {
+      "x": 3840,
+      "y": 0,
+      "w": 1200,
+      "h": 2420,
+      "title": "03 · Accessibility"
+    },
+    "DesignOps.dc.html": {
+      "x": 5120,
+      "y": 0,
+      "w": 1200,
+      "h": 2380,
+      "title": "04 · Design operations"
+    },
+    "About.dc.html": {
+      "x": 6400,
+      "y": 0,
+      "w": 1200,
+      "title": "About",
+      "h": 2760
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-10-29T04:30:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "noteOrder": [
+    "rowtitle",
+    "n-main",
+    "n-pay",
+    "n-hard",
+    "n-a11y",
+    "n-ops",
+    "n-about"
+  ],
+  "notes": {
+    "rowtitle": {
+      "kind": "title1",
+      "maxW": 7600,
+      "text": "Joseph Lee · VA case studies (structure pass, draft 3)",
+      "w": 240,
+      "x": 0,
+      "y": -320
+    },
+    "n-main": {
+      "fill": "orange",
+      "w": 520,
+      "x": 0,
+      "y": 3100,
+      "text": "OPEN ITEMS\n• Case study order: title → intro + snapshot sidebar → hero visual → problem → what I did (\"I partnered\" only where shared) → the result (3 tiles) → what I learned (pull quote) → next case study.\n• Thumbnails on the overview cards and hero visuals in each study are still placeholders.\n• Mentoring claims: CRISTA team of 4, teaching another VA team the Figma migration, shared AI tools. Nothing more.\n• Fix resume title (Senior vs Staff) and the 'Headheaded' typo; make resume numbers match the overview."
+    },
+    "n-pay": {
+      "fill": "blue",
+      "w": 520,
+      "x": 1280,
+      "y": 2600,
+      "text": "SOURCES (remove before publishing)\nvets-website PRs #48131, #48140, #48155, #48346, #48541, #49031 · prototype kit: modernized-ae PRD, PRs #512/#524/#542/#556/#572, copay + overpayment 'with study feedback' prototypes · sessions Apr 24, Sep 8, Sep 22, Oct 6.\nTO CONFIRM: usage results after Nov 11 launch? 'What I learned' line is a draft; rewrite in your words."
+    },
+    "n-hard": {
+      "fill": "blue",
+      "w": 520,
+      "x": 2560,
+      "y": 2600,
+      "text": "SOURCES (remove before publishing)\nPRs #45354, #45698, #45724, #45667, 145225 commit series · Figma comments May 7–19 · VSO demo Aug 4.\nOWNERSHIP: the warning-page idea came from the designer-researcher; scope cuts were team calls. 'What I learned' line is a draft; rewrite in your words."
+    },
+    "n-a11y": {
+      "fill": "blue",
+      "w": 520,
+      "x": 3840,
+      "y": 2600,
+      "text": "SOURCES (remove before publishing)\nPRs #46726, #46938 · 2023–24: #24409, #24415, #24651, #25446, #28377, #31109, #31214, #31697 · 2026: #44851, table focus fix (Feb), va-link PRs.\nTO CONFIRM: your AT setup (VoiceOver macOS/iOS? NVDA? magnifier?), how you use axe, and the before/after recording."
+    },
+    "n-ops": {
+      "fill": "blue",
+      "w": 520,
+      "x": 5120,
+      "y": 2600,
+      "text": "SOURCES (remove before publishing)\nToken PRs #47057, #47059, #47065, #47098 · link PRs #47197, #47211, #47198, #47230 · Figma for Government session (Jul 27–Oct 28) · AI workflows session Oct 27.\nCREDIT: token scanner = VA platform engineer; prototype kit = kit maintainers. You built the annotation overlay + skill."
+    },
+    "n-about": {
+      "fill": "orange",
+      "w": 520,
+      "x": 6400,
+      "y": 2880,
+      "text": "TO FILL IN\n• Headshot (from josephrlee.com)\n• 2–3 quotes from colleagues or LinkedIn recommendations\n• Check the drafted line: 'The thread through all of it…'"
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "Payments.dc.html",
+    "Hardship.dc.html",
+    "Accessibility.dc.html",
+    "DesignOps.dc.html",
+    "About.dc.html"
+  ],
+  "pages": [],
+  "title": "VA Portfolio Case Studies"
+}

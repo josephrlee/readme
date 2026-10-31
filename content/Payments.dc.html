@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Case study 01: Bringing a Veteran’s payments into one place</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&amp;family=Literata:ital,wght@0,400;0,700;1,400&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#27C9F1}a:hover{color:#8FE3F8}
+.pf h1,.pf h2,.pf h3,.pf p,.pf ul{margin:0}
+.pf h1,.pf h2,.pf h3,.pf .micro,.pf .tag{font-family:'Outfit','Helvetica Neue',Arial,sans-serif}
+.pf h1{font-size:48px;font-weight:900;letter-spacing:0.01em;line-height:1.08}
+.pf h2{font-size:28px;font-weight:800;line-height:1.15}
+.pf h3{font-size:20px;font-weight:700;line-height:1.3}
+.pf p,.pf li{font-size:16px;line-height:1.6;font-weight:400}
+.pf ul{padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.pf .micro{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+.pf .mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.pf .lead{font-size:22px;line-height:1.45;font-style:italic}
+.pf .tag{display:inline-block;align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:0.5px;padding:4px 10px;border-radius:9999px}
+.pf .led{background:#27C9F1;color:#111111}
+.pf .partnered{border:1px solid #27C9F1;color:#27C9F1}
+.pf strong{font-weight:700}
+/* Type rhythm: 4px baseline, line heights on the grid, prose capped at ~66 characters */
+.pf p,.pf li{font-size:18px;line-height:28px;max-width:66ch!important}
+.pf .lead{font-size:22px;line-height:32px;max-width:32em!important}
+.pf h1{line-height:56px;max-width:22ch!important}
+.pf h2{font-size:28px;line-height:36px}
+.pf h3{line-height:28px}
+.pf .micro{font-size:12px;line-height:16px}
+.pf p[style*='font-size: 14px'],.pf figcaption{font-size:15px!important;line-height:24px}
+.pf .mono{line-height:1.2}
+.pf .skip{position:absolute;left:-9999px;top:16px;z-index:10;background:#27C9F1;color:#111111;padding:8px 16px;border-radius:6px;font-weight:700}
+.pf .skip:focus{left:16px}
+</style>
+</helmet>
+<div class="pf" style="position: relative; width: 1200px; height: 2460px; box-sizing: border-box; padding: 80px; background: #222222; color: #F5F5F5; font-family: 'Literata',Georgia,serif; display: flex; flex-direction: column; gap: 56px">
+<a href="#main" class="skip">Skip to main content</a>
+<nav aria-label="Main" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid #444444; padding-bottom: 20px">
+<a href="Main.dc.html" style="font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 22px; font-weight: 900; color: #F5F5F5; text-decoration: none">Joseph Lee</a>
+<ul style="list-style: none; display: flex; flex-direction: row; gap: 28px; margin: 0; padding: 0"><li><a href="Main.dc.html" style="font-weight: 700">Work</a></li><li><a href="About.dc.html" style="font-weight: 700">About</a></li><li><a href="https://www.linkedin.com/in/josephrlee" aria-current="page" style="font-weight: 700">LinkedIn</a></li><li><a href="mailto:josephrlee@gmail.com" aria-current="page" style="font-weight: 700">Email</a></li></ul>
+</nav>
+<main id="main" style="display: flex; flex-direction: column; gap: 56px">
+
+<header style="display: flex; flex-direction: column; gap: 20px">
+<p class="micro" style="color: #27C9F1">Case study 01</p>
+<h1 style="max-width: 980px">Bringing a Veteran’s payments into one place</h1>
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 56px; align-items: start">
+<p class="lead" style="color: #D6D6D6">Overpayments, copays and travel pay each lived in a different part of VA.gov. I designed and built one place in My VA where Veterans can see what they owe, what they’ve been paid, and what to do next.</p>
+<dl style="margin: 0; display: flex; flex-direction: column; gap: 20px; border-left: 1px solid #444444; padding-left: 32px">
+<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">Situation</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">3 systems, 4+ teams</dd></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">My role</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">Primary designer for Payments + front end</dd></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">Team</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">PM, research, content + 2 partner teams</dd></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">Outcome</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">Launches Nov 11, 2026</dd></div>
+</dl>
+</div>
+</header>
+
+<div style="border: 2px dashed #5A5A5A; border-radius: 10px; height: 380px; display: flex; align-items: center; justify-content: center; background: #2C2C2C">
+<p class="mono" style="color: #B8B8B8; font-size: 14px">[Hero visual: My VA Payments, desktop and mobile]</p>
+</div>
+
+
+<section style="display: flex; flex-direction: column; gap: 16px; max-width: 900px">
+<h2>The problem</h2>
+<p>Each payment type came from a different system, and overpayments alone had 13 statuses. Without shared rules, Veterans couldn’t tell what actually needed their attention.</p>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 24px">
+<h2>What I did</h2>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+<div style="border: 1px solid #444444; border-radius: 10px; padding: 24px; background: #2C2C2C; display: flex; flex-direction: column; gap: 12px">
+<h3>Wrote the rules first</h3>
+<p style="color: #D6D6D6">I mapped every status to Action required, Updates or hidden, each with a clear next step. Debts about to go to the U.S. Treasury always go on top, since that’s the worst outcome for a Veteran.</p>
+</div>
+<div style="border: 1px solid #444444; border-radius: 10px; padding: 24px; background: #2C2C2C; display: flex; flex-direction: column; gap: 12px">
+<h3>Planned for things breaking</h3>
+<p style="color: #D6D6D6">I designed 8 data scenarios, from empty to timeout. If one system goes down, only its section shows an alert.</p>
+</div>
+<div style="border: 1px solid #444444; border-radius: 10px; padding: 24px; background: #2C2C2C; display: flex; flex-direction: column; gap: 12px">
+<h3>Tested with real data</h3>
+<p style="color: #D6D6D6">Before launch, we ran a canary test with real data, and it caught a lot of travel pay bugs. For example, saved and incomplete claims were showing up as updates, so I pulled them out and gave each its own status tag.</p>
+</div>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 40px; border-top: 1px solid #444444; padding-top: 40px">
+<div style="display: flex; flex-direction: column; gap: 24px">
+<h2>The result</h2>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 8px; border-top: 4px solid #27C9F1; padding-top: 16px"><h3 style="font-size: 22px">One place for payments</h3><p style="color: #B8B8B8">Overpayments, copays and travel pay in one view, launching Nov 11, 2026.</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px; border-top: 4px solid #27C9F1; padding-top: 16px"><h3 style="font-size: 22px">Research built in</h3><p style="color: #B8B8B8">Study findings shaped the first release and the next phase.</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px; border-top: 4px solid #27C9F1; padding-top: 16px"><h3 style="font-size: 22px">Designed and coded by me</h3><p style="color: #B8B8B8">6 front-end releases, from the rules to the code.</p></div>
+</div>
+</div>
+<figure style="margin: 0; border-left: 4px solid #27C9F1; padding: 8px 0 8px 28px; max-width: 900px; display: flex; flex-direction: column; gap: 12px">
+<h2 style="font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin: 0; color: #B8B8B8">What I learned</h2>
+<blockquote style="margin: 0"><p class="lead" style="font-size: 26px; color: #F5F5F5">Pulling records from several systems into one view is mostly a rules problem. Getting everyone to agree on the rules was most of the work.</p></blockquote>
+</figure>
+<div style="display: flex; flex-direction: column; gap: 12px; border: 1px solid #444444; border-radius: 10px; padding: 32px; background: #2C2C2C">
+<h2 style="font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin: 0; color: #27C9F1">Next case study</h2>
+<p style="color: #D6D6D6">Payments was about getting a lot of systems to agree. Next is a single high-stakes choice, where the hard part was being honest about the risk.</p>
+<p style="font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 24px; line-height: 32px; font-weight: 700; max-width: none"><a href="Hardship.dc.html" style="color: #F5F5F5">A way to pause debt collection, without hiding the risk<span aria-hidden="true"> →</span></a></p>
+</div>
+</section>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1200,"height":2460}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
