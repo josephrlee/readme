@@ -28,10 +28,24 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Assemble public site
+        run: |
+          mkdir -p _site/assets/css _site/assets/past-work _site/assets/case-studies
+          cp index.html favicon.png CNAME _site/
+          cp joe-headshot-*.jpg _site/
+          cp -R about work _site/
+          cp assets/css/portfolio.css _site/assets/css/
+          cp assets/past-work/thumb-world-concern-end-of-year.jpg assets/past-work/thumb-sua-homepage.jpg assets/past-work/thumb-rap-homepage.jpg _site/assets/past-work/
+          for study in 01-payments 02-hardship 03-accessibility 04-design-ops; do
+            mkdir -p "_site/assets/case-studies/$study"
+            cp -R "assets/case-studies/$study/composed" "_site/assets/case-studies/$study/"
+          done
+          touch _site/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '_site'
 
       - name: Deploy to GitHub Pages
         id: deployment
