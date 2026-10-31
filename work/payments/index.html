@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How I brought VA overpayments, copays and travel pay together in My VA.">
+  <title>Bringing a Veteran’s payments into one place | Joseph Lee</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/isy2dwp.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&amp;family=Work+Sans:wght@400;500;600;700;800;900&amp;display=swap">
+  <link rel="stylesheet" href="/assets/css/portfolio.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="Joseph Lee, home">Joseph Lee</a>
+      <nav class="primary-nav" aria-label="Main">
+        <a href="/#work" aria-current="location">Work</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
+
+    <main id="main-content" class="case-study">
+      <header class="case-hero">
+        <p class="eyebrow">Case study 01</p>
+        <h1>Bringing a Veteran’s payments into one place</h1>
+        <div class="case-summary">
+          <p class="lead">Overpayments, copays and travel pay each lived in a different part of VA.gov. I designed and built one place in My VA where Veterans can see what they owe, what they’ve been paid, and what to do next.</p>
+          <dl class="case-facts">
+            <div><dt>Situation</dt><dd>3 systems, 4+ teams</dd></div>
+            <div><dt>My role</dt><dd>Primary designer for Payments + front end</dd></div>
+            <div><dt>Team</dt><dd>PM, research, content + 2 partner teams</dd></div>
+            <div><dt>Outcome</dt><dd>Launches Nov 11, 2026</dd></div>
+          </dl>
+        </div>
+        <img src="/assets/case-studies/01-payments/composed/hero.png" alt="VA.gov Payments page shown on desktop and phone, with Action required tasks above the Updates section." loading="eager" decoding="async">
+      </header>
+
+      <section class="study-section study-prose" aria-labelledby="problem-title">
+        <h2 id="problem-title">The problem</h2>
+        <p>Each payment type came from a different system, and overpayments alone had 13 statuses. Without shared rules, Veterans couldn’t tell what actually needed their attention.</p>
+      </section>
+
+      <section class="study-section" aria-labelledby="work-title">
+        <h2 id="work-title">What I did</h2>
+        <div class="action-grid">
+          <article class="action-card"><h3>Wrote the rules first</h3><p>I mapped every status to Action required, Updates or hidden, each with a clear next step. Debts about to go to the U.S. Treasury always go on top, since that’s the worst outcome for a Veteran.</p></article>
+          <article class="action-card"><h3>Planned for things breaking</h3><p>I designed 8 data scenarios, from empty to timeout. If one system goes down, only its section shows an alert.</p></article>
+          <article class="action-card"><h3>Tested with real data</h3><p>Before launch, we ran a canary test with real data, and it caught a lot of travel pay bugs. For example, saved and incomplete claims were showing up as updates, so I pulled them out and gave each its own status tag.</p></article>
+        </div>
+      </section>
+
+      <section class="study-section" aria-label="Payments status and data states">
+        <div class="detail-image-grid">
+          <figure><img src="/assets/case-studies/01-payments/composed/routing.png" alt="Table mapping overpayment statuses to Action required, Updates, or hidden, and showing whether a due date appears." width="2880" height="1620" loading="lazy" decoding="async"><figcaption>Overpayment status routing</figcaption></figure>
+          <figure><img src="/assets/case-studies/01-payments/composed/states.png" alt="Payments empty state beside a partial-error state, where available items remain visible while travel pay data fails to load." width="2880" height="1620" loading="lazy" decoding="async"><figcaption>Empty and partial-error states</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="study-section result-section" aria-labelledby="result-title">
+        <h2 id="result-title">The result</h2>
+        <div class="result-grid">
+          <article class="result-item"><h3>One place for payments</h3><p>Overpayments, copays and travel pay in one view, launching Nov 11, 2026.</p></article>
+          <article class="result-item"><h3>Research built in</h3><p>Study findings shaped the first release and the next phase.</p></article>
+          <article class="result-item"><h3>Designed and coded by me</h3><p>6 front-end releases, from the rules to the code.</p></article>
+        </div>
+        <figure class="learning-quote">
+          <h2>What I learned</h2>
+          <blockquote><p>Pulling records from several systems into one view is mostly a rules problem. Getting everyone to agree on the rules was most of the work.</p></blockquote>
+        </figure>
+        <nav class="next-study" aria-label="Next case study">
+          <p class="eyebrow">Next case study</p>
+          <p>Payments was about getting a lot of systems to agree. Next is a single high-stakes choice, where the hard part was being honest about the risk.</p>
+          <a href="/work/hardship-suspension/">A way to pause debt collection, without hiding the risk <span aria-hidden="true">→</span></a>
+        </nav>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>josephrlee@gmail.com</span>
+      <a href="/">Back to all work</a>
+      <a href="https://www.linkedin.com/in/josephrlee" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </footer>
+  </div>
+</body>
+</html>

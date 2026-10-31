@@ -1,236 +1,118 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description"
-        content="About Joseph Lee, a designer in Seattle who makes things clear and useful.">
-    <title>Joseph Lee - A produdct designer from Seattle</title>
-    <link rel="icon" type="image/png" href="./assets/favicon.png">
-    <link rel="stylesheet" href="https://use.typekit.net/isy2dwp.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-        @layer components {
-      .page {
-        @apply m-0 bg-[#222] text-[#f5f5f5] leading-[1.4];
-        font-family: freight-micro-pro, serif;
-      }
-
-      .about-shell {
-        @apply relative w-full px-[5%] pt-[12%] pb-[10%];
-      }
-
-      .portrait-panel {
-        @apply mb-4 flex w-full items-center justify-center overflow-hidden pt-0 pr-[5%] pl-[5%];
-      }
-
-      .portrait-image {
-        @apply block h-auto w-full object-center;
-      }
-
-      .about-panel {
-        @apply w-full px-[5%] flex-col justify-center;
-      }
-
-      .about-header {
-        @apply mb-[14px] flex flex-wrap items-baseline gap-x-3 gap-y-2;
-      }
-
-      .about-title {
-        @apply m-0 text-[clamp(3rem,7vw,6rem)] leading-[1.1] font-black tracking-[0.02em];
-        font-family: brandon-grotesque, sans-serif;
-      }
-
-      .social-links {
-        @apply m-0 inline-flex list-none items-center gap-2 p-0;
-      }
-
-      .social-link {
-        @apply inline-flex min-h-10 min-w-10 items-center justify-center p-2;
-      }
-
-      .social-icon {
-        @apply size-[14px] fill-[#27c9f1];
-      }
-
-      .about-panel p {
-        @apply mb-[14px] text-[clamp(1.35rem,1.05rem+0.65vw,1.75rem)] font-thin italic leading-[1.4] text-[rgba(245,245,245,0.85)];
-      }
-
-      .about-panel a {
-        @apply text-[#27c9f1] underline-offset-[2px] transition-colors duration-200;
-      }
-
-      .about-panel a:hover {
-        @apply text-[#5bc7e3];
-      }
-
-      .about-panel a:focus-visible {
-        @apply rounded-[2px] outline outline-2 outline-offset-3 outline-[#27c9f1];
-      }
-
-      @media (min-width: 550px) {
-        .about-panel {
-          width: 100%;
-        }
-
-        .portrait-panel {
-          width: 60%;
-        }
-
-        .portrait-image {
-          width: 100%;
-        }
-      }
-
-      @media (min-width: 750px) {
-        .about-panel {
-          width: 60%;
-        }
-
-        .portrait-panel {
-          position: relative;
-          float: right;
-          top: 0;
-          right: 0;
-          width: 40%;
-          bottom: auto;
-          margin-bottom: 0;
-          min-height: 0;
-          padding: 0;
-        }
-
-        .portrait-image {
-          width: 100%;
-          height: auto;
-          object-fit: contain;
-        }
-      }
-
-      @media (min-width: 1040px) {
-        .about-shell {
-          padding: 3rem 5vw;
-        }
-
-        .about-panel {
-          width: clamp(32rem, 54vw, 46rem);
-          padding: 0 4vw 0 0;
-          justify-content: flex-start;
-        }
-
-        .portrait-image {
-          width: 100%;
-          height: auto;
-        }
-      }
-
-      @media (min-width: 1200px) {
-        .about-title {
-          font-size: clamp(4.5rem, 6vw, 6.5rem);
-        }
-
-        .about-shell {
-          @apply flex items-start;
-          @apply items-center;
-          min-height: 100vh;
-          padding: 0 0 0 5vw;
-        }
-
-        .about-panel {
-          @apply flex;
-          min-height: 100vh;
-          justify-content: center;
-        }
-
-        .portrait-panel {
-          position: fixed;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          width: 40vw;
-          min-height: 700px;
-        }
-
-        .portrait-image {
-          height: 100%;
-          object-fit: cover;
-        }
-      }
-
-      @media (min-width: 1536px) {
-        .about-shell {
-          justify-content: center;
-          padding: 0 40vw 0 0;
-        }
-
-        .about-panel {
-          width: min(52rem, 100%);
-          min-height: 100vh;
-          margin: 0 auto;
-          padding: 0 3vw;
-          justify-content: center;
-        }
-      }
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Joseph Lee is a product designer who makes complex things clear and useful.">
+  <title>Joseph Lee | Product Designer</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/isy2dwp.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&amp;family=Work+Sans:wght@400;500;600;700;800;900&amp;display=swap">
+  <link rel="stylesheet" href="/assets/css/portfolio.css">
 </head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="Joseph Lee, home">Joseph Lee</a>
+      <nav class="primary-nav" aria-label="Main">
+        <a href="/#work" aria-current="page">Work</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
 
-<body class="page">
-    <main id="main-content" aria-label="About Me" class="about-shell">
-        <aside class="portrait-panel">
-            <img class="portrait-image" src="./assets/joe-headshot-1024.jpg"
-                srcset="./assets/joe-headshot-480.jpg 480w, ./assets/joe-headshot-768.jpg 768w, ./assets/joe-headshot-1024.jpg 1024w, ./assets/joe-headshot-1440.jpg 1440w, ./assets/joe-headshot-web.jpg 2444w"
-                sizes="(min-width: 1200px) 40vw, (min-width: 1040px) 38vw, (min-width: 750px) 40vw, (min-width: 550px) 60vw, 90vw"
-                width="2444" height="3666" alt="Portrait of Joseph Lee" loading="eager" decoding="async">
-        </aside>
-        <article class="about-panel">
-            <div class="about-header">
-                <h1 class="about-title">Joseph Lee</h1>
-                <ul aria-label="Social links" class="social-links">
-                    <li>
-                        <a class="social-link" href="https://www.linkedin.com/in/josephrlee" title="Connect on LinkedIn"
-                            aria-label="LinkedIn (opens in a new tab)" target="_blank" rel="noopener noreferrer">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                class="social-icon">
-                                <path
-                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.60 0 4.26 2.364 4.26 5.437v5.304zM5.337 7.433a2.062 2.062 0 1 1 0-4.123 2.062 2.062 0 0 1 0 4.123zm-1.777 1.915h3.554v10.964H3.56V9.348z">
-                                </path>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="social-link" href="https://twitter.com/josephrlee" title="Connect on Twitter"
-                            aria-label="Twitter (opens in a new tab)" target="_blank" rel="noopener noreferrer">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                class="social-icon">
-                                <path
-                                    d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.92 0 .386.044.762.127 1.122C7.69 8.095 4.067 6.13 1.64 3.162a4.9 4.9 0 0 0-.666 2.475c0 1.71.87 3.215 2.188 4.099-.806-.026-1.566-.247-2.229-.616v.061c0 2.386 1.697 4.374 3.95 4.827-.413.112-.849.171-1.296.171-.317 0-.625-.03-.928-.086.625 1.956 2.444 3.377 4.6 3.416-1.684 1.32-3.808 2.108-6.114 2.108-.397 0-.789-.023-1.175-.069A13.9 13.9 0 0 0 12 22.196c2.94 0 5.714-1.13 7.76-2.95 1.94-1.95 3.04-4.57 3.04-7.396V8.18c.944-.686 1.764-1.542 2.414-2.521z">
-                                </path>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="social-link" href="https://github.com/josephrlee" title="View my Github"
-                            aria-label="GitHub (opens in a new tab)" target="_blank" rel="noopener noreferrer">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                class="social-icon">
-                                <path
-                                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.7 17.55 3.7 17.55c-1.088-.745.082-.729.082-.729 1.203.085 1.836 1.236 1.836 1.236 1.07 1.834 2.808 1.305 3.493.997.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.335-5.467-5.934 0-1.31.468-2.381 1.236-3.221-.124-.303-.535-1.527.117-3.176 0 0 1.008-.322 3.301 1.23A11.49 11.49 0 0 1 12 5.84c1.02 0 2.047.138 3.006.404 2.29-1.553 3.297-1.23 3.297-1.23.653 1.649.242 2.873.118 3.176.77.84 1.236 1.911 1.236 3.221 0 4.609-2.806 5.624-5.479 5.924.431.37.814 1.1.814 2.219 0 1.603-.014 2.896-.014 3.287 0 .32.216.694.825.576C20.565 22.092 24 17.593 24 12.297 24 5.67 18.627.297 12 .297z">
-                                </path>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
+    <main id="main-content">
+      <section class="home-intro" aria-labelledby="page-title">
+        <p class="eyebrow">Staff Product Designer · Seattle</p>
+        <h1 id="page-title">I’m a product designer who makes complex things clear and useful.</h1>
+        <p class="lead">For 20 years I’ve taken products from messy requirements to shipped, accessible code. Most recently, that’s debt and payment tools for Veterans on VA.gov.</p>
+      </section>
+
+      <section class="content-section" id="work" aria-labelledby="work-title">
+        <div class="section-heading"><div>
+          <h2 id="work-title">Case studies</h2>
+          <p class="section-intro">My work on VA.gov through Friends From The City, from new features to how our team works.</p>
+        </div></div>
+        <div class="case-grid">
+          <article class="case-card">
+            <div class="case-card__image"><a class="case-card__image-link" href="/work/payments/"><img src="/assets/case-studies/01-payments/composed/thumb.png" alt="VA.gov Payments page with an Action required list of payment tasks." width="1200" height="675" loading="lazy" decoding="async"></a></div>
+            <div class="case-card__body">
+              <p class="eyebrow">01 · Service design across systems</p>
+              <h3><a href="/work/payments/">Bringing a Veteran’s payments into one place</a></h3>
+              <p>One view for overpayments, copays and travel pay in My VA. Launches Nov 11, 2026.</p>
             </div>
-            <p>Hi, I'm a designer in Seattle. I make things that are clear and useful.
-            </p>
-            <p>I'm currently a Staff Product Designer at <a href="https://www.friendsfromthecity.com/">Friends From The
-                    City</a>, where I help support Veterans through debt resolution.</p>
-            <p>Most of my background has been helping nonprofits build user-friendly products through design and code. I believe good design is equitable, inclusive, and practical.</p>
-            <p>If you'd like to say hello, <a href="mailto:josephrlee@gmail.com">email me</a>.</p>
-        </article>
-    </main>
-</body>
+          </article>
+          <article class="case-card">
+            <div class="case-card__image"><a class="case-card__image-link" href="/work/hardship-suspension/"><img src="/assets/case-studies/02-hardship/composed/thumb.png" alt="Relief options step with hardship suspension selected." width="1200" height="675" loading="lazy" decoding="async"></a></div>
+            <div class="case-card__body">
+              <p class="eyebrow">02 · Product strategy in a regulated space</p>
+              <h3><a href="/work/hardship-suspension/">A way to pause debt collection, without hiding the risk</a></h3>
+              <p>Veterans can pause collection during a hardship and see the risk first. Launched July 2026.</p>
+            </div>
+          </article>
+          <article class="case-card">
+            <div class="case-card__image"><a class="case-card__image-link" href="/work/accessibility/"><img src="/assets/case-studies/03-accessibility/composed/thumb.png" alt="Zero-income warning shown above an income field on VA.gov." width="1200" height="675" loading="lazy" decoding="async"></a></div>
+            <div class="case-card__body">
+              <p class="eyebrow">03 · Accessibility in design and code</p>
+              <h3><a href="/work/accessibility/">Making accessibility part of how we work</a></h3>
+              <p>From flagging issues in reviews to fixing them in code, across 4 apps.</p>
+            </div>
+          </article>
+          <article class="case-card">
+            <div class="case-card__image"><a class="case-card__image-link" href="/work/design-ops/"><img src="/assets/case-studies/04-design-ops/composed/thumb.png" alt="Pull request with a before-and-after screenshot table." width="1200" height="675" loading="lazy" decoding="async"></a></div>
+            <div class="case-card__body">
+              <p class="eyebrow">04 · Design ops and AI workflows</p>
+              <h3><a href="/work/design-ops/">Cleaning up our design tools and process</a></h3>
+              <p>Moved our design history, got 4 apps back on tokens, and built AI tools for the team.</p>
+            </div>
+          </article>
+        </div>
+      </section>
 
+      <section class="content-section value-section" aria-labelledby="value-title">
+        <h2 id="value-title">What I bring</h2>
+        <div class="value-grid">
+          <article class="value-item"><h3>Prototyping in code</h3><p>I prototype with real components, keep design and code in sync, and ship front-end fixes myself.</p></article>
+          <article class="value-item"><h3>Accessibility from the start</h3><p>I test with VoiceOver, zoom and axe, and fix problems at the source.</p></article>
+          <article class="value-item"><h3>Practical AI workflows</h3><p>I build AI workflows for busywork, share them with my team, and review the results.</p></article>
+          <article class="value-item"><h3>Leadership and teaching</h3><p>I’ve also managed a team of 4, and I like teaching what I build, most recently our Figma migration for another VA team.</p></article>
+        </div>
+      </section>
+
+      <section class="content-section earlier-section" aria-labelledby="earlier-title">
+        <p class="eyebrow">Earlier work · 2009–2022</p>
+        <h2 id="earlier-title">Before the VA</h2>
+        <p class="lead">For 13 years I led a small team designing and building websites for nonprofits, from research to launch. I also connected the tools behind our fundraising, so marketing could run campaigns across channels and see what was working.</p>
+        <div class="metric-grid">
+          <div><p class="metric">+55%</p><p>Donation revenue after the Seattle Urban Academy relaunch</p></div>
+          <div><p class="metric">4%</p><p>Bounce rate after World Concern’s 2020 redesign</p></div>
+          <div><p class="metric">4</p><p>Designers and developers I led at CRISTA</p></div>
+        </div>
+        <div class="past-work-grid">
+          <figure>
+            <img src="/assets/past-work/thumb-world-concern-end-of-year.jpg" alt="World Concern year-end giving page for clean water." width="800" height="500" loading="lazy" decoding="async">
+            <figcaption><strong>World Concern</strong><br>Redesigns in 2013 and 2020; led the 2020 move to Statamic</figcaption>
+          </figure>
+          <figure>
+            <img src="/assets/past-work/thumb-sua-homepage.jpg" alt="Seattle Urban Academy homepage." width="800" height="500" loading="lazy" decoding="async">
+            <figcaption><strong>Seattle Urban Academy</strong><br>Site for students and donors, 2019</figcaption>
+          </figure>
+          <figure>
+            <img src="/assets/past-work/thumb-rap-homepage.jpg" alt="Remember a Pet homepage for sympathy cards." width="800" height="500" loading="lazy" decoding="async">
+            <figcaption><strong>Remember a Pet</strong><br>Card service for vet clinics, 2016</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>josephrlee@gmail.com</span>
+      <a href="https://josephrlee.com">josephrlee.com</a>
+      <a href="https://www.linkedin.com/in/josephrlee" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/josephrlee" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </footer>
+  </div>
+</body>
 </html>

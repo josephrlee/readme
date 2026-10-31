@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How I made accessibility part of design and code across four VA.gov apps.">
+  <title>Making accessibility part of how we work | Joseph Lee</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/isy2dwp.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&amp;family=Work+Sans:wght@400;500;600;700;800;900&amp;display=swap">
+  <link rel="stylesheet" href="/assets/css/portfolio.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="Joseph Lee, home">Joseph Lee</a>
+      <nav class="primary-nav" aria-label="Main">
+        <a href="/#work" aria-current="location">Work</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
+
+    <main id="main-content" class="case-study">
+      <header class="case-hero">
+        <p class="eyebrow">Case study 03</p>
+        <h1>Making accessibility part of how we work</h1>
+        <div class="case-summary">
+          <p class="lead">Over three years on VA.gov, I went from flagging accessibility issues in reviews to fixing them in code, and keeping them fixed across four apps.</p>
+          <dl class="case-facts">
+            <div><dt>Situation</dt><dd>Shared code, many teams</dd></div>
+            <div><dt>My role</dt><dd>Designer + front end</dd></div>
+            <div><dt>Partners</dt><dd>VA accessibility specialists</dd></div>
+            <div><dt>Outcome</dt><dd>Fixes across 4 apps</dd></div>
+          </dl>
+        </div>
+        <img src="/assets/case-studies/03-accessibility/composed/hero.png" alt="VA debt help income form shown on desktop and phone, with a warning above the gross monthly income field after $0.00 is entered." loading="eager" decoding="async">
+      </header>
+
+      <section class="study-section study-prose" aria-labelledby="problem-title">
+        <h2 id="problem-title">The problem</h2>
+        <p>Many accessibility issues showed up late, in formal reviews right before launch, when they’re slowest to fix. Fixing one page at a time didn’t stop them from coming back.</p>
+      </section>
+
+      <section class="study-section" aria-labelledby="work-title">
+        <h2 id="work-title">What I did</h2>
+        <div class="action-grid">
+          <article class="action-card"><h3>Fixed the pattern, not just the page</h3><p>I fixed headings, data tables and focus after page changes, and moved four apps onto the design system’s link components. I also pushed for a page-title fix every page could reuse.</p></article>
+          <article class="action-card"><h3>Tracked down the root cause</h3><p>A warning I designed was read twice by VoiceOver. I traced it to two lines of our code, fixed both, and added tests.</p></article>
+          <article class="action-card"><h3>Made testing a habit</h3><p>I check my own work with VoiceOver, zoom and axe before review, and lock fixes in with automated tests.</p></article>
+        </div>
+      </section>
+
+      <section class="study-section" aria-label="Accessibility design comparison">
+        <div class="detail-image-grid">
+          <figure><img src="/assets/case-studies/03-accessibility/composed/before-after.png" alt="Before and after comparison: the earlier design uses red error styling with a warning below the field; the final design moves the warning above the income field and removes the error styling." width="2880" height="1620" loading="lazy" decoding="async"><figcaption>Before and after</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="study-section result-section" aria-labelledby="result-title">
+        <h2 id="result-title">The result</h2>
+        <div class="result-grid">
+          <article class="result-item"><h3>4 apps, 3 years</h3><p>From contrast and zoom in 2023 to root causes in code in 2026.</p></article>
+          <article class="result-item"><h3>Findings closed</h3><p>The VoiceOver fixes shipped in August 2026, and several VA accessibility findings were closed.</p></article>
+          <article class="result-item"><h3>Fixes that stay fixed</h3><p>Automated tests flag it if a fix ever breaks.</p></article>
+        </div>
+        <figure class="learning-quote"><h2>What I learned</h2><blockquote><p>Accessibility is much easier to build in from the start than to add later. I’ve done both.</p></blockquote></figure>
+        <nav class="next-study" aria-label="Next case study">
+          <p class="eyebrow">Next case study</p>
+          <p>Accessibility was about raising the bar on the product. Next is raising it on how our team works.</p>
+          <a href="/work/design-ops/">Cleaning up our design tools and process <span aria-hidden="true">→</span></a>
+        </nav>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>josephrlee@gmail.com</span><a href="/">Back to all work</a><a href="https://www.linkedin.com/in/josephrlee" target="_blank" rel="noopener noreferrer">LinkedIn</a></footer>
+  </div>
+</body>
+</html>
