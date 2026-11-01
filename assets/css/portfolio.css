@@ -109,7 +109,6 @@ main {
 .case-card__image { width: 100%; aspect-ratio: 16 / 9; overflow: hidden; }
 .case-card__image img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .case-card__body { display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem; padding: 1.5rem; }
-.case-card__body h3 { max-width: 28ch; }
 .case-card__body h3 a { color: var(--text); }
 .case-card__body h3 a:hover { color: var(--text); text-decoration-color: currentColor; }
 .case-card__body > p:last-child, .value-item p, .result-item p { color: var(--muted); }
