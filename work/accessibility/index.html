@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="How I made accessibility part of design and code across four VA.gov apps.">
+  <meta name="description" content="How I fixed accessibility barriers in four VA.gov apps and added checks to help keep them from returning.">
   <title>Making accessibility part of how we work | Joseph Lee</title>
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,15 +25,15 @@
 
     <main id="main-content" class="case-study">
       <header class="case-hero">
-        <p class="eyebrow">Case study 03</p>
+        <p class="eyebrow">03 · Accessible design and code</p>
         <h1>Making accessibility part of how we work</h1>
         <div class="case-summary">
-          <p class="lead">Over three years on VA.gov, I went from flagging accessibility issues in reviews to fixing them in code, and keeping them fixed across four apps.</p>
+          <p class="lead">Over three years, I fixed accessibility problems across four VA.gov apps. I started by pointing them out in design reviews, then tracked down and fixed the underlying code. I also added tests to catch issues like screen readers repeating a warning or keyboard users losing their place.</p>
           <dl class="case-facts">
-            <div><dt>Situation</dt><dd>Shared code, many teams</dd></div>
-            <div><dt>My role</dt><dd>Designer + front end</dd></div>
-            <div><dt>Partners</dt><dd>VA accessibility specialists</dd></div>
-            <div><dt>Outcome</dt><dd>Fixes across 4 apps</dd></div>
+            <div><dt>Situation</dt><dd>Accessibility fixes across 4 apps</dd></div>
+            <div><dt>My role</dt><dd>Design reviews, code fixes, and tests</dd></div>
+            <div><dt>Team</dt><dd>Partnered with VA accessibility specialists</dd></div>
+            <div><dt>Outcome</dt><dd>Fixes shipped; tests added</dd></div>
           </dl>
         </div>
         <img src="/assets/case-studies/03-accessibility/composed/hero.png" alt="VA debt help income form shown on desktop and phone, with a warning above the gross monthly income field after $0.00 is entered." loading="eager" decoding="async">
@@ -41,41 +41,54 @@
 
       <section class="study-section study-prose" aria-labelledby="problem-title">
         <h2 id="problem-title">The problem</h2>
-        <p>Many accessibility issues showed up late, in formal reviews right before launch, when they’re slowest to fix. Fixing one page at a time didn’t stop them from coming back.</p>
+        <p>People using screen readers, keyboards, or enlarged text can encounter barriers others may not notice. Many surfaced just before launch, when fixes were disruptive, and a one-page fix didn’t stop the same problem from appearing elsewhere.</p>
       </section>
 
       <section class="study-section" aria-labelledby="work-title">
         <h2 id="work-title">What I did</h2>
         <div class="action-grid">
-          <article class="action-card"><h3>Fixed the pattern, not just the page</h3><p>I fixed headings, data tables and focus after page changes, and moved four apps onto the design system’s link components. I also pushed for a page-title fix every page could reuse.</p></article>
-          <article class="action-card"><h3>Tracked down the root cause</h3><p>A warning I designed was read twice by VoiceOver. I traced it to two lines of our code, fixed both, and added tests.</p></article>
-          <article class="action-card"><h3>Made testing a habit</h3><p>I check my own work with VoiceOver, zoom and axe before review, and lock fixes in with automated tests.</p></article>
+          <article class="action-card"><h3>Fixed shared parts, not just individual pages</h3><p>I corrected headings, tables, and keyboard focus after page updates, then moved four apps to shared link components. I also advocated for a reusable fix to how screen readers announce page titles.</p></article>
+          <article class="action-card"><h3>Found why a warning was repeated</h3><p>A warning I designed was announced twice by VoiceOver, Apple’s screen reader. I traced the duplicate announcement to two lines of code, corrected them, and added tests to catch the problem if it returns.</p></article>
+          <article class="action-card"><h3>Tested it myself</h3><p>Before review, I check with VoiceOver, enlarged text, and axe, an automated accessibility checker. I also add tests to catch broken fixes.</p></article>
         </div>
       </section>
 
-      <section class="study-section" aria-label="Accessibility design comparison">
+      <section class="study-section" aria-label="Accessibility design and implementation examples">
         <div class="detail-image-grid">
           <figure><img src="/assets/case-studies/03-accessibility/composed/before-after.png" alt="Before and after comparison: the earlier design uses red error styling with a warning below the field; the final design moves the warning above the income field and removes the error styling." width="2880" height="1620" loading="lazy" decoding="async"><figcaption>Before and after</figcaption></figure>
+          <figure><img src="/assets/case-studies/04-design-ops/composed/hero.png" alt="GitHub-style pull request summary for the zero-dollar employment income alert, with a before-and-after screenshot table." width="2880" height="1620" loading="lazy" decoding="async"><figcaption>The merged change documents the alert and the updated design.</figcaption></figure>
         </div>
       </section>
 
       <section class="study-section result-section" aria-labelledby="result-title">
         <h2 id="result-title">The result</h2>
         <div class="result-grid">
-          <article class="result-item"><h3>4 apps, 3 years</h3><p>From contrast and zoom in 2023 to root causes in code in 2026.</p></article>
-          <article class="result-item"><h3>Findings closed</h3><p>The VoiceOver fixes shipped in August 2026, and several VA accessibility findings were closed.</p></article>
-          <article class="result-item"><h3>Fixes that stay fixed</h3><p>Automated tests flag it if a fix ever breaks.</p></article>
+          <article class="result-item"><h3>Code fixes across 4 apps</h3><p>Over 3 years, I moved from checking contrast and zoom to fixing the code behind the issues.</p></article>
+          <article class="result-item"><h3>Screen-reader fix shipped</h3><p>The VoiceOver improvements went live in August 2026, and several accessibility issues identified by VA were resolved.</p></article>
+          <article class="result-item"><h3>Tests catch broken fixes</h3><p>Automated tests flag when a later change breaks an accessibility fix.</p></article>
         </div>
-        <figure class="learning-quote"><h2>What I learned</h2><blockquote><p>Accessibility is much easier to build in from the start than to add later. I’ve done both.</p></blockquote></figure>
-        <nav class="next-study" aria-label="Next case study">
-          <p class="eyebrow">Next case study</p>
-          <p>Accessibility was about raising the bar on the product. Next is raising it on how our team works.</p>
-          <a href="/work/design-ops/">Cleaning up our design tools and process <span aria-hidden="true">→</span></a>
-        </nav>
+        <figure class="learning-quote"><h2>What I learned</h2>        <blockquote><p>It’s easier to make a product work for more people from the start than to retrofit those improvements later. I’ve done both.</p></blockquote></figure>
+        <div class="study-navigation">
+          <nav class="next-study" aria-label="Previous case study">
+            <p class="eyebrow">Previous case study</p>
+            <p>A way to pause VA debt collection, with the deadline risk explained up front.</p>
+            <a href="/work/hardship-suspension/"><span aria-hidden="true">←</span> A way to pause debt collection, without hiding the risk</a>
+          </nav>
+          <nav class="next-study" aria-label="Next case study">
+            <p class="eyebrow">Next case study</p>
+            <p>After that, I turned to the tools and routines our team uses to build those products.</p>
+            <a href="/work/design-ops/">Cleaning up our design tools and process <span aria-hidden="true">→</span></a>
+          </nav>
+        </div>
       </section>
     </main>
 
-    <footer class="site-footer"><span>josephrlee@gmail.com</span><a href="/">Back to all work</a><a href="https://www.linkedin.com/in/josephrlee" target="_blank" rel="noopener noreferrer">LinkedIn</a></footer>
+    <footer class="site-footer">
+      <a href="mailto:josephrlee@gmail.com">josephrlee@gmail.com</a>
+      <a href="/">All work</a>
+      <a class="social-link" href="https://www.linkedin.com/in/josephrlee" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM6.119 9H2.56v11.452h3.559V9z"/></svg></a>
+      <a class="social-link" href="https://github.com/josephrlee" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.31-3.76-1.31-.51-1.29-1.24-1.63-1.24-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 .1.62 2.34 3.81 1.68.1-.72.39-1.21.7-1.49-2.48-.28-5.09-1.24-5.09-5.53 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15a10.6 10.6 0 0 1 5.55 0c2.11-1.45 3.05-1.15 3.05-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.3-2.61 5.25-5.1 5.52.4.35.75 1.02.75 2.06v3.05c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9z"/></svg></a>
+    </footer>
   </div>
 </body>
 </html>

@@ -49,15 +49,15 @@ a{color:#27C9F1}a:hover{color:#8FE3F8}
 <main id="main" style="display: flex; flex-direction: column; gap: 56px">
 
 <header style="display: flex; flex-direction: column; gap: 20px">
-<p class="micro" style="color: #27C9F1">Case study 01</p>
+<p class="micro" style="color: #27C9F1">01 · Service design across systems</p>
 <h1 style="max-width: 980px">Bringing a Veteran’s payments into one place</h1>
 <div style="display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 56px; align-items: start">
-<p class="lead" style="color: #D6D6D6">Overpayments, copays and travel pay each lived in a different part of VA.gov. I designed and built one place in My VA where Veterans can see what they owe, what they’ve been paid, and what to do next.</p>
+<p class="lead" style="color: #D6D6D6">I was the primary designer for the Payments page in My VA, the signed-in part of VA.gov, and helped build it. The page brings together medical copays, VA overpayments, benefit payment history, and travel reimbursements from separate systems. I worked out how to show what Veterans need to do, explain when payment information may be late, and keep other information visible if one system is down.</p>
 <dl style="margin: 0; display: flex; flex-direction: column; gap: 20px; border-left: 1px solid #444444; padding-left: 32px">
-<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">Situation</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">3 systems, 4+ teams</dd></div>
-<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">My role</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">Primary designer for Payments + front end</dd></div>
-<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">Team</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">PM, research, content + 2 partner teams</dd></div>
-<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">Outcome</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">Launches Nov 11, 2026</dd></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">Situation</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">Combining payments from 3 systems</dd></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">My role</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">Primary designer; front-end contributor</dd></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">Team</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">Product, research, content; 2 partner teams</dd></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">Outcome</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">Launch planned for Nov 11, 2026</dd></div>
 </dl>
 </div>
 </header>
@@ -69,23 +69,23 @@ a{color:#27C9F1}a:hover{color:#8FE3F8}
 
 <section style="display: flex; flex-direction: column; gap: 16px; max-width: 900px">
 <h2>The problem</h2>
-<p>Each payment type came from a different system, and overpayments alone had 13 statuses. Without shared rules, Veterans couldn’t tell what actually needed their attention.</p>
+<p>Medical copays, VA overpayments, benefit payment history, and travel reimbursements came from separate systems. An overpayment can happen when someone receives more benefits than they were eligible for. Overpayments alone had 13 status labels, but those labels didn’t say what to do next. Monthly statements can also show a copay for days after it’s paid, while aging out an unresolved overpayment could hide a needed action.</p>
 </section>
 
 <section style="display: flex; flex-direction: column; gap: 24px">
 <h2>What I did</h2>
 <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
 <div style="border: 1px solid #444444; border-radius: 10px; padding: 24px; background: #2C2C2C; display: flex; flex-direction: column; gap: 12px">
-<h3>Wrote the rules first</h3>
-<p style="color: #D6D6D6">I mapped every status to Action required, Updates or hidden, each with a clear next step. Debts about to go to the U.S. Treasury always go on top, since that’s the worst outcome for a Veteran.</p>
+<h3>Organized debts around the next step</h3>
+<p style="color: #D6D6D6">Debts Veterans could act on stay under “Action required”; informational ones go under “Updates.” Unrecognized statuses aren’t shown. If a debt has gone to the U.S. Treasury for collection, the Veteran must contact the Treasury, so it appears as an update instead.</p>
 </div>
 <div style="border: 1px solid #444444; border-radius: 10px; padding: 24px; background: #2C2C2C; display: flex; flex-direction: column; gap: 12px">
-<h3>Planned for things breaking</h3>
-<p style="color: #D6D6D6">I designed 8 data scenarios, from empty to timeout. If one system goes down, only its section shows an alert.</p>
+<h3>Made room for delayed or missing data</h3>
+<p style="color: #D6D6D6">I explained that a paid copay may still appear, and used a warning to ask people to check an item without incorrectly calling it overdue. I also designed for 8 situations, including system outages, so one failure won’t hide other payment information.</p>
 </div>
 <div style="border: 1px solid #444444; border-radius: 10px; padding: 24px; background: #2C2C2C; display: flex; flex-direction: column; gap: 12px">
-<h3>Tested with real data</h3>
-<p style="color: #D6D6D6">Before launch, we ran a canary test with real data, and it caught a lot of travel pay bugs. For example, saved and incomplete claims were showing up as updates, so I pulled them out and gave each its own status tag.</p>
+<h3>Made travel reimbursement tasks specific</h3>
+<p style="color: #D6D6D6">Each task names the appointment date and time, so people can tell which trip they’re claiming. In-progress claims are labeled “Saved” or “Incomplete.” Testing with payment records caught claims in the wrong section before launch.</p>
 </div>
 </div>
 </section>
@@ -94,23 +94,29 @@ a{color:#27C9F1}a:hover{color:#8FE3F8}
 <div style="display: flex; flex-direction: column; gap: 24px">
 <h2>The result</h2>
 <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px">
-<div style="display: flex; flex-direction: column; gap: 8px; border-top: 4px solid #27C9F1; padding-top: 16px"><h3 style="font-size: 22px">One place for payments</h3><p style="color: #B8B8B8">Overpayments, copays and travel pay in one view, launching Nov 11, 2026.</p></div>
-<div style="display: flex; flex-direction: column; gap: 8px; border-top: 4px solid #27C9F1; padding-top: 16px"><h3 style="font-size: 22px">Research built in</h3><p style="color: #B8B8B8">Study findings shaped the first release and the next phase.</p></div>
-<div style="display: flex; flex-direction: column; gap: 8px; border-top: 4px solid #27C9F1; padding-top: 16px"><h3 style="font-size: 22px">Designed and coded by me</h3><p style="color: #B8B8B8">6 front-end releases, from the rules to the code.</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px; border-top: 4px solid #27C9F1; padding-top: 16px"><h3 style="font-size: 22px">13 debt labels, 3 clear outcomes</h3><p style="color: #B8B8B8">Debts Veterans can act on stay visible, even when old. Informational and unrecognized statuses are handled separately.</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px; border-top: 4px solid #27C9F1; padding-top: 16px"><h3 style="font-size: 22px">Payment information stays available</h3><p style="color: #B8B8B8">Across 8 situations, an outage affects its own section. The rest of the page remains available.</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px; border-top: 4px solid #27C9F1; padding-top: 16px"><h3 style="font-size: 22px">Designed, built and tested</h3><p style="color: #B8B8B8">I designed and built the page through 6 releases. Testing with actual payment records helped us fix travel reimbursement tasks before launch.</p></div>
 </div>
 </div>
 <figure style="margin: 0; border-left: 4px solid #27C9F1; padding: 8px 0 8px 28px; max-width: 900px; display: flex; flex-direction: column; gap: 12px">
 <h2 style="font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin: 0; color: #B8B8B8">What I learned</h2>
-<blockquote style="margin: 0"><p class="lead" style="font-size: 26px; color: #F5F5F5">Pulling records from several systems into one view is mostly a rules problem. Getting everyone to agree on the rules was most of the work.</p></blockquote>
+<blockquote style="margin: 0"><p class="lead" style="font-size: 26px; color: #F5F5F5">The hard part wasn’t putting the records together. It was deciding what to show when systems were late or disagreed.</p></blockquote>
 </figure>
 <div style="display: flex; flex-direction: column; gap: 12px; border: 1px solid #444444; border-radius: 10px; padding: 32px; background: #2C2C2C">
 <h2 style="font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin: 0; color: #27C9F1">Next case study</h2>
-<p style="color: #D6D6D6">Payments was about getting a lot of systems to agree. Next is a single high-stakes choice, where the hard part was being honest about the risk.</p>
+<p style="color: #D6D6D6">Then I worked on a different problem: explaining a debt-relief option with real trade-offs.</p>
 <p style="font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 24px; line-height: 32px; font-weight: 700; max-width: none"><a href="Hardship.dc.html" style="color: #F5F5F5">A way to pause debt collection, without hiding the risk<span aria-hidden="true"> →</span></a></p>
 </div>
 </section>
 
 </main>
+<footer class="site-footer" style="display: flex; gap: 24px; flex-wrap: wrap; align-items: center; border-top: 1px solid #444444; padding-block: 24px">
+<a href="mailto:josephrlee@gmail.com">josephrlee@gmail.com</a>
+<a href="Main.dc.html">All work</a>
+<a href="https://www.linkedin.com/in/josephrlee" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" style="display: inline-flex; color: #F5F5F5"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 24px; height: 24px; fill: currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM6.119 9H2.56v11.452h3.559V9z"/></svg></a>
+<a href="https://github.com/josephrlee" aria-label="GitHub" target="_blank" rel="noopener noreferrer" style="display: inline-flex; color: #F5F5F5"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 24px; height: 24px; fill: currentColor"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.31-3.76-1.31-.51-1.29-1.24-1.63-1.24-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 .1.62 2.34 3.81 1.68.1-.72.39-1.21.7-1.49-2.48-.28-5.09-1.24-5.09-5.53 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15a10.6 10.6 0 0 1 5.55 0c2.11-1.45 3.05-1.15 3.05-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.3-2.61 5.25-5.1 5.52.4.35.75 1.02.75 2.06v3.05c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9z"/></svg></a>
+</footer>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1200,"height":2460}}'>

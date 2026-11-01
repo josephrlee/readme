@@ -25,15 +25,15 @@
 
     <main id="main-content" class="case-study">
       <header class="case-hero">
-        <p class="eyebrow">Case study 01</p>
+        <p class="eyebrow">01 · Service design across systems</p>
         <h1>Bringing a Veteran’s payments into one place</h1>
         <div class="case-summary">
-          <p class="lead">Overpayments, copays and travel pay each lived in a different part of VA.gov. I designed and built one place in My VA where Veterans can see what they owe, what they’ve been paid, and what to do next.</p>
+          <p class="lead">I was the primary designer for the Payments page in My VA, the signed-in part of VA.gov, and helped build it. The page brings together medical copays, VA overpayments, benefit payment history, and travel reimbursements from separate systems. I worked out how to show what Veterans need to do, explain when payment information may be late, and keep other information visible if one system is down.</p>
           <dl class="case-facts">
-            <div><dt>Situation</dt><dd>3 systems, 4+ teams</dd></div>
-            <div><dt>My role</dt><dd>Primary designer for Payments + front end</dd></div>
-            <div><dt>Team</dt><dd>PM, research, content + 2 partner teams</dd></div>
-            <div><dt>Outcome</dt><dd>Launches Nov 11, 2026</dd></div>
+            <div><dt>Situation</dt><dd>Combining payments from 3 systems</dd></div>
+            <div><dt>My role</dt><dd>Primary designer; front-end contributor</dd></div>
+            <div><dt>Team</dt><dd>Product, research, content; 2 partner teams</dd></div>
+            <div><dt>Outcome</dt><dd>Launch planned for Nov 11, 2026</dd></div>
           </dl>
         </div>
         <img src="/assets/case-studies/01-payments/composed/hero.png" alt="VA.gov Payments page shown on desktop and phone, with Action required tasks above the Updates section." loading="eager" decoding="async">
@@ -41,15 +41,15 @@
 
       <section class="study-section study-prose" aria-labelledby="problem-title">
         <h2 id="problem-title">The problem</h2>
-        <p>Each payment type came from a different system, and overpayments alone had 13 statuses. Without shared rules, Veterans couldn’t tell what actually needed their attention.</p>
+        <p>Medical copays, VA overpayments, benefit payment history, and travel reimbursements came from separate systems. An overpayment can happen when someone receives more benefits than they were eligible for. Overpayments alone had 13 status labels, but those labels didn’t say what to do next. Monthly statements can also show a copay for days after it’s paid, while aging out an unresolved overpayment could hide a needed action.</p>
       </section>
 
       <section class="study-section" aria-labelledby="work-title">
         <h2 id="work-title">What I did</h2>
         <div class="action-grid">
-          <article class="action-card"><h3>Wrote the rules first</h3><p>I mapped every status to Action required, Updates or hidden, each with a clear next step. Debts about to go to the U.S. Treasury always go on top, since that’s the worst outcome for a Veteran.</p></article>
-          <article class="action-card"><h3>Planned for things breaking</h3><p>I designed 8 data scenarios, from empty to timeout. If one system goes down, only its section shows an alert.</p></article>
-          <article class="action-card"><h3>Tested with real data</h3><p>Before launch, we ran a canary test with real data, and it caught a lot of travel pay bugs. For example, saved and incomplete claims were showing up as updates, so I pulled them out and gave each its own status tag.</p></article>
+          <article class="action-card"><h3>Organized debts around the next step</h3><p>Debts Veterans could act on stay under “Action required”; informational ones go under “Updates.” Unrecognized statuses aren’t shown. If a debt has gone to the U.S. Treasury for collection, the Veteran must contact the Treasury, so it appears as an update instead.</p></article>
+          <article class="action-card"><h3>Made room for delayed or missing data</h3><p>I explained that a paid copay may still appear, and used a warning to ask people to check an item without incorrectly calling it overdue. I also designed for 8 situations, including system outages, so one failure won’t hide other payment information.</p></article>
+          <article class="action-card"><h3>Made travel reimbursement tasks specific</h3><p>Each task names the appointment date and time, so people can tell which trip they’re claiming. In-progress claims are labeled “Saved” or “Incomplete.” Testing with payment records caught claims in the wrong section before launch.</p></article>
         </div>
       </section>
 
@@ -63,26 +63,27 @@
       <section class="study-section result-section" aria-labelledby="result-title">
         <h2 id="result-title">The result</h2>
         <div class="result-grid">
-          <article class="result-item"><h3>One place for payments</h3><p>Overpayments, copays and travel pay in one view, launching Nov 11, 2026.</p></article>
-          <article class="result-item"><h3>Research built in</h3><p>Study findings shaped the first release and the next phase.</p></article>
-          <article class="result-item"><h3>Designed and coded by me</h3><p>6 front-end releases, from the rules to the code.</p></article>
+          <article class="result-item"><h3>13 debt labels, 3 clear outcomes</h3><p>Debts Veterans can act on stay visible, even when old. Informational and unrecognized statuses are handled separately.</p></article>
+          <article class="result-item"><h3>Payment information stays available</h3><p>Across 8 situations, an outage affects its own section. The rest of the page remains available.</p></article>
+          <article class="result-item"><h3>Designed, built and tested</h3><p>I designed and built the page through 6 releases. Testing with actual payment records helped us fix travel reimbursement tasks before launch.</p></article>
         </div>
         <figure class="learning-quote">
           <h2>What I learned</h2>
-          <blockquote><p>Pulling records from several systems into one view is mostly a rules problem. Getting everyone to agree on the rules was most of the work.</p></blockquote>
+          <blockquote><p>The hard part wasn’t putting the records together. It was deciding what to show when systems were late or disagreed.</p></blockquote>
         </figure>
         <nav class="next-study" aria-label="Next case study">
           <p class="eyebrow">Next case study</p>
-          <p>Payments was about getting a lot of systems to agree. Next is a single high-stakes choice, where the hard part was being honest about the risk.</p>
+          <p>Then I worked on a different problem: explaining a debt-relief option with real trade-offs.</p>
           <a href="/work/hardship-suspension/">A way to pause debt collection, without hiding the risk <span aria-hidden="true">→</span></a>
         </nav>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>josephrlee@gmail.com</span>
-      <a href="/">Back to all work</a>
-      <a href="https://www.linkedin.com/in/josephrlee" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:josephrlee@gmail.com">josephrlee@gmail.com</a>
+      <a href="/">All work</a>
+      <a class="social-link" href="https://www.linkedin.com/in/josephrlee" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM6.119 9H2.56v11.452h3.559V9z"/></svg></a>
+      <a class="social-link" href="https://github.com/josephrlee" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.31-3.76-1.31-.51-1.29-1.24-1.63-1.24-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 .1.62 2.34 3.81 1.68.1-.72.39-1.21.7-1.49-2.48-.28-5.09-1.24-5.09-5.53 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15a10.6 10.6 0 0 1 5.55 0c2.11-1.45 3.05-1.15 3.05-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.3-2.61 5.25-5.1 5.52.4.35.75 1.02.75 2.06v3.05c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9z"/></svg></a>
     </footer>
   </div>
 </body>

@@ -49,15 +49,15 @@ a{color:#27C9F1}a:hover{color:#8FE3F8}
 <main id="main" style="display: flex; flex-direction: column; gap: 56px">
 
 <header style="display: flex; flex-direction: column; gap: 20px">
-<p class="micro" style="color: #27C9F1">Case study 03</p>
+<p class="micro" style="color: #27C9F1">03 · Accessible design and code</p>
 <h1 style="max-width: 980px">Making accessibility part of how we work</h1>
 <div style="display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 56px; align-items: start">
-<p class="lead" style="color: #D6D6D6">Over three years on VA.gov, I went from flagging accessibility issues in reviews to fixing them in code, and keeping them fixed across four apps.</p>
+<p class="lead" style="color: #D6D6D6">Over three years, I fixed accessibility problems across four VA.gov apps. I started by pointing them out in design reviews, then tracked down and fixed the underlying code. I also added tests to catch issues like screen readers repeating a warning or keyboard users losing their place.</p>
 <dl style="margin: 0; display: flex; flex-direction: column; gap: 20px; border-left: 1px solid #444444; padding-left: 32px">
-<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">Situation</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">Shared code, many teams</dd></div>
-<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">My role</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">Designer + front end</dd></div>
-<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">Partners</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">VA accessibility specialists</dd></div>
-<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">Outcome</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">Fixes across 4 apps</dd></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">Situation</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">Accessibility fixes across 4 apps</dd></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">My role</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">Design reviews, code fixes, and tests</dd></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">Team</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">Partnered with VA accessibility specialists</dd></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><dt class="micro" style="color: #B8B8B8">Outcome</dt><dd style="margin: 0; font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 20px; font-weight: 700; line-height: 1.3">Fixes shipped; tests added</dd></div>
 </dl>
 </div>
 </header>
@@ -68,24 +68,38 @@ a{color:#27C9F1}a:hover{color:#8FE3F8}
 
 <section style="display: flex; flex-direction: column; gap: 16px; max-width: 900px">
 <h2>The problem</h2>
-<p>Many accessibility issues showed up late, in formal reviews right before launch, when they’re slowest to fix. Fixing one page at a time didn’t stop them from coming back.</p>
+<p>People using screen readers, keyboards, or enlarged text can encounter barriers others may not notice. Many surfaced just before launch, when fixes were disruptive, and a one-page fix didn’t stop the same problem from appearing elsewhere.</p>
 </section>
 
 <section style="display: flex; flex-direction: column; gap: 24px">
 <h2>What I did</h2>
 <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
 <div style="border: 1px solid #444444; border-radius: 10px; padding: 24px; background: #2C2C2C; display: flex; flex-direction: column; gap: 12px">
-<h3>Fixed the pattern, not just the page</h3>
-<p style="color: #D6D6D6">I fixed headings, data tables and focus after page changes, and moved four apps onto the design system’s link components. I also pushed for a page-title fix every page could reuse.</p>
+<h3>Fixed shared parts, not just individual pages</h3>
+<p style="color: #D6D6D6">I corrected headings, tables, and keyboard focus after page updates, then moved four apps to shared link components. I also advocated for a reusable fix to how screen readers announce page titles.</p>
 </div>
 <div style="border: 1px solid #444444; border-radius: 10px; padding: 24px; background: #2C2C2C; display: flex; flex-direction: column; gap: 12px">
 <h3>Tracked down the root cause</h3>
-<p style="color: #D6D6D6">A warning I designed was read twice by VoiceOver. I traced it to two lines of our code, fixed both, and added tests.</p>
+<p style="color: #D6D6D6">A warning I designed was announced twice by VoiceOver, Apple’s screen reader. I traced the duplicate announcement to two lines of code, corrected them, and added tests to catch the problem if it returns.</p>
 </div>
 <div style="border: 1px solid #444444; border-radius: 10px; padding: 24px; background: #2C2C2C; display: flex; flex-direction: column; gap: 12px">
-<h3>Made testing a habit</h3>
-<p style="color: #D6D6D6">I check my own work with VoiceOver, zoom and axe before review, and lock fixes in with automated tests.</p>
+<h3>Tested it myself</h3>
+<p style="color: #D6D6D6">Before review, I check with VoiceOver, enlarged text, and axe, an automated accessibility checker. I also add tests to catch broken fixes.</p>
 </div>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 24px">
+<h2>Design and implementation examples</h2>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 8px">
+<div style="border: 2px dashed #5A5A5A; border-radius: 10px; aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center; background: #2C2C2C"><p class="mono" style="color: #B8B8B8; font-size: 14px">[Visual: before-and-after comparison of the income warning]</p></div>
+<figcaption style="color: #B8B8B8">Before and after</figcaption>
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 8px">
+<div style="border: 2px dashed #5A5A5A; border-radius: 10px; aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center; background: #2C2C2C"><p class="mono" style="color: #B8B8B8; font-size: 14px">[Supporting visual: pull request summary and before-and-after screenshots]</p></div>
+<figcaption style="color: #B8B8B8">The merged change documents the alert and the updated design.</figcaption>
+</figure>
 </div>
 </section>
 
@@ -93,23 +107,36 @@ a{color:#27C9F1}a:hover{color:#8FE3F8}
 <div style="display: flex; flex-direction: column; gap: 24px">
 <h2>The result</h2>
 <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px">
-<div style="display: flex; flex-direction: column; gap: 8px; border-top: 4px solid #27C9F1; padding-top: 16px"><h3 style="font-size: 22px">4 apps, 3 years</h3><p style="color: #B8B8B8">From contrast and zoom in 2023 to root causes in code in 2026.</p></div>
-<div style="display: flex; flex-direction: column; gap: 8px; border-top: 4px solid #27C9F1; padding-top: 16px"><h3 style="font-size: 22px">Findings closed</h3><p style="color: #B8B8B8">The VoiceOver fixes shipped in August 2026, and several VA accessibility findings were closed.</p></div>
-<div style="display: flex; flex-direction: column; gap: 8px; border-top: 4px solid #27C9F1; padding-top: 16px"><h3 style="font-size: 22px">Fixes that stay fixed</h3><p style="color: #B8B8B8">Automated tests flag it if a fix ever breaks.</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px; border-top: 4px solid #27C9F1; padding-top: 16px"><h3 style="font-size: 22px">Code fixes across 4 apps</h3><p style="color: #B8B8B8">Over 3 years, I moved from checking contrast and zoom to fixing the code behind the issues.</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px; border-top: 4px solid #27C9F1; padding-top: 16px"><h3 style="font-size: 22px">Screen-reader fix shipped</h3><p style="color: #B8B8B8">The VoiceOver improvements went live in August 2026, and several accessibility issues identified by VA were resolved.</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px; border-top: 4px solid #27C9F1; padding-top: 16px"><h3 style="font-size: 22px">Tests catch broken fixes</h3><p style="color: #B8B8B8">Automated tests flag when a later change breaks an accessibility fix.</p></div>
 </div>
 </div>
 <figure style="margin: 0; border-left: 4px solid #27C9F1; padding: 8px 0 8px 28px; max-width: 900px; display: flex; flex-direction: column; gap: 12px">
 <h2 style="font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin: 0; color: #B8B8B8">What I learned</h2>
-<blockquote style="margin: 0"><p class="lead" style="font-size: 26px; color: #F5F5F5">Accessibility is much easier to build in from the start than to add later. I’ve done both.</p></blockquote>
+<blockquote style="margin: 0"><p class="lead" style="font-size: 26px; color: #F5F5F5">It’s easier to make a product work for more people from the start than to retrofit those improvements later. I’ve done both.</p></blockquote>
 </figure>
-<div style="display: flex; flex-direction: column; gap: 12px; border: 1px solid #444444; border-radius: 10px; padding: 32px; background: #2C2C2C">
+<div class="study-navigation">
+<nav class="next-study" aria-label="Previous case study">
+<h2 style="font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin: 0; color: #27C9F1">Previous case study</h2>
+<p style="color: #D6D6D6">A way to pause VA debt collection, with the deadline risk explained up front.</p>
+<a href="Hardship.dc.html"><span aria-hidden="true">←</span> A way to pause debt collection, without hiding the risk</a>
+</nav>
+<nav class="next-study" aria-label="Next case study">
 <h2 style="font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin: 0; color: #27C9F1">Next case study</h2>
-<p style="color: #D6D6D6">Accessibility was about raising the bar on the product. Next is raising it on how our team works.</p>
-<p style="font-family: 'Outfit','Helvetica Neue',Arial,sans-serif; font-size: 24px; line-height: 32px; font-weight: 700; max-width: none"><a href="DesignOps.dc.html" style="color: #F5F5F5">Cleaning up our design tools and process<span aria-hidden="true"> →</span></a></p>
+<p style="color: #D6D6D6">After that, I turned to the tools and routines our team uses to build those products.</p>
+<a href="DesignOps.dc.html">Cleaning up our design tools and process<span aria-hidden="true"> →</span></a>
+</nav>
 </div>
 </section>
 
 </main>
+<footer class="site-footer" style="display: flex; gap: 24px; flex-wrap: wrap; align-items: center; border-top: 1px solid #444444; padding-block: 24px">
+<a href="mailto:josephrlee@gmail.com">josephrlee@gmail.com</a>
+<a href="Main.dc.html">All work</a>
+<a href="https://www.linkedin.com/in/josephrlee" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" style="display: inline-flex; color: #F5F5F5"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 24px; height: 24px; fill: currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM6.119 9H2.56v11.452h3.559V9z"/></svg></a>
+<a href="https://github.com/josephrlee" aria-label="GitHub" target="_blank" rel="noopener noreferrer" style="display: inline-flex; color: #F5F5F5"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 24px; height: 24px; fill: currentColor"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.31-3.76-1.31-.51-1.29-1.24-1.63-1.24-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 .1.62 2.34 3.81 1.68.1-.72.39-1.21.7-1.49-2.48-.28-5.09-1.24-5.09-5.53 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15a10.6 10.6 0 0 1 5.55 0c2.11-1.45 3.05-1.15 3.05-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.3-2.61 5.25-5.1 5.52.4.35.75 1.02.75 2.06v3.05c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9z"/></svg></a>
+</footer>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1200,"height":2420}}'>
